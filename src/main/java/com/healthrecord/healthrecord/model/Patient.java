@@ -22,8 +22,10 @@ public class Patient {
     private String subCounty;
     private String telephone;
     private String email;
-    private String gender;
-    private String maritalStatus;
+    @Enumerated(EnumType.STRING)
+    private Gender gender;
+    @Enumerated(EnumType.STRING)
+    private MaritalStatus maritalStatus;
     @OneToOne(mappedBy = "patient", cascade = CascadeType.ALL)
     private NextOfKin nextOfKin;
 
@@ -36,8 +38,8 @@ public class Patient {
                    String subCounty,
                    String telephone,
                    String email,
-                   String gender,
-                   String maritalStatus) {
+                   Gender gender,
+                   MaritalStatus maritalStatus) {
         this.refNo = refNo;
         this.name = name;
         this.dateOfBirth = dateOfBirth;

@@ -16,7 +16,8 @@ public class NextOfKin {
     private String name;
     private LocalDate dateOfBirth;
     private String idNo;
-    private String gender;
+    @Enumerated(EnumType.STRING)
+    private Gender gender;
     private String relationship;
     private String telephone;
     @OneToOne
@@ -26,7 +27,7 @@ public class NextOfKin {
     public NextOfKin(String name,
                      LocalDate dateOfBirth,
                      String idNo,
-                     String gender,
+                     Gender gender,
                      String relationship,
                      String telephone) {
         this.name = name;
