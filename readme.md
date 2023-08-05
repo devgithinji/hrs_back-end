@@ -1,6 +1,5 @@
 # Data capture backend app
 
-
 To run the Spring Boot application with the given instructions, follow these steps:
 
 Step 1: Set Up the Database
@@ -41,6 +40,10 @@ spring.datasource.password=<your_mysql_password>
 ```
 
 Replace `<your_mysql_username>` and `<your_mysql_password>` with your actual MySQL credentials.
+
+uncomment the init mode property to create the schema in the application.properties file
+
+`#spring.sql.init.mode=always`
 
 Step 3: Build and Run the Application
 
